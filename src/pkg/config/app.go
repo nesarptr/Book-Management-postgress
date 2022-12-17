@@ -13,8 +13,9 @@ var db *gorm.DB
 
 func Connect() {
 
-	err := godotenv.Load()
+	err := godotenv.Load("..\\..\\.env")
 	if err != nil {
+		fmt.Println(err)
 		panic(err)
 	}
 
